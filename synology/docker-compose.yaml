@@ -1,0 +1,12 @@
+version: '2'
+services:
+  dns:
+    image: mvance/unbound:latest 
+    restart: unless-stopped
+    container_name: unbound
+    ports:
+      - "8953:953/tcp" #External control port is 8953 mapped to 953 in the container
+      - "8053:53/tcp" #External TCP port 8053 ismapped to 53 in the container
+      - "8053:53/udp" #External UDP port 8053 ismapped to 53 in the container
+    volumes:
+      - /volume2/docker/unbound/:/opt/unbound/etc/unbound/ #mount a previously created external volume so settings survive a restart/update
