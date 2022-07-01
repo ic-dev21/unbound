@@ -3,7 +3,7 @@ This repository contains docker-compose files for adding an unbound container on
 
 I already had a docker instance of Pi-Hole running in a container on both my Raspberry Pi (Primary) and Synology NAS (Secondary).
 
-Both Pi-Hole instances were running flawlessly but I wanted the extra privacy afforded by unbound. I tried multiple methods, bridge networking, macvlans, single images with both, but none worked or could be simply spun up on either hardware without major changed.
+Both Pi-Hole instances were running flawlessly but I wanted the extra privacy afforded by unbound. I tried multiple methods, bridge networking, macvlans, single images with both, but none worked or could be simply spun up on either hardware without major changes.
 
 So by trial and error I was able to get unbound to work with the docker-compose examples in this repository.
 
